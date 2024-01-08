@@ -20,7 +20,7 @@ const Body = () => {
 
     const json = await data.json();
 
-    console.log(json);
+    // console.log(json);
 
     // changing cards[5] to cards[2]
     setAllRes(
