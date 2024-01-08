@@ -1,5 +1,5 @@
 import ItemList from "./ItemList";
-import { StickyCard as CategoryType } from "../types/resInfo";
+import type { StickyCard as CategoryType } from "../types/resInfo";
 
 const MenuCategory = ({
   data,

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { ALL_RESTAURANTS_URL as ALL_RESDATA_URL } from "../utils/constants";
-import { RestaurantType as ResType } from "../types/allRestaurants";
+import type { RestaurantType as ResType } from "../types/allRestaurants";
 
 const Body = () => {
   const [allRes, setAllRes] = useState<ResType[]>([]);

@@ -1,14 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../store/actions";
 
 const Header = () => {
   const [btn, setBtn] = useState("Login");
-  // console.log("Header rendered"); // when setBtn is called, the whole Header component is rendered but only btn is updated.
   const onlineStatus = useOnlineStatus();
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useAppSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between bg-sky-50 shadow-lg h-[70px] sticky top-0 z-50">

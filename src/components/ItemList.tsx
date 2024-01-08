@@ -1,16 +1,15 @@
 import { CDN_URL } from "../utils/constants";
-import { addItem, removeItem } from "../utils/CartSlice";
-import { useDispatch } from "react-redux";
-import { ItemCard } from "../types/resInfo";
+import { addItem, removeItem } from "../store/cartSlice";
+import { useAppDispatch } from "../store/actions";
+import type { ItemCard } from "../types/resInfo";
 
 const ItemList = ({ items, input }: { items: ItemCard[]; input: string }) => {
-  const dispatch = useDispatch();
-  const handleAddItem = (item) => {
+  const dispatch = useAppDispatch();
+  const handleAddItem = (item: ItemCard) => {
     dispatch(addItem(item));
-    // alert('item added to your Cart');
   };
 
-  const handleRemoveItem = (item) => {
+  const handleRemoveItem = (item: ItemCard) => {
     dispatch(removeItem(item));
   };
 

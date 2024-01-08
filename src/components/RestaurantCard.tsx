@@ -1,5 +1,5 @@
 import { CDN_URL } from "../utils/constants";
-import { RestaurantType as ResType } from "../types/allRestaurants";
+import type { RestaurantType as ResType } from "../types/allRestaurants";
 
 const RestaurantCard = ({ resData }: { resData: ResType }) => {
   const { name, cuisines, cloudinaryImageId, avgRating, locality, areaName } =

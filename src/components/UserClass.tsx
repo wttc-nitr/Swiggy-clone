@@ -1,7 +1,16 @@
 import React from "react";
 
+type PropType = {
+  name: string;
+  location: string;
+};
+
+type StateType = {
+  counter: number;
+};
+
 class UserClass extends React.Component {
-  constructor(props) {
+  constructor(props: PropType) {
     super(props);
 
     this.state = {
@@ -14,18 +23,18 @@ class UserClass extends React.Component {
 
     /**
      * creating a mess:
-     * 
+     *
      * this.timer = setInterval(() => {
      *  console.log('hi');
      * }, 1000);
      */
-    console.log('hi from comDidMnt');
+    console.log("hi from comDidMnt");
   }
 
   componentDidUpdate() {
     // after subsequent renders, this function is invoked
     // we should not make api call here because api call will be made after each render
-    console.log('hi from comDidUpd');
+    console.log("hi from comDidUpd");
   }
 
   componentWillUnmount() {
@@ -34,17 +43,17 @@ class UserClass extends React.Component {
 
     /**
      * cleaning the mess made in componentDidMount:
-     * 
+     *
      * clearInterval(this.timer);
-     * 
+     *
      */
 
-    console.log('hi from comWillUnmnt');
+    console.log("hi from comWillUnmnt");
   }
 
   render() {
-    const { name, location } = this.props;
-    const { counter } = this.state;
+    const { name, location } = this.props as PropType;
+    const { counter } = this.state as StateType;
 
     return (
       <div style={{ border: "3px solid red" }}>
