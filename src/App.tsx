@@ -8,13 +8,11 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
 import { lazy, Suspense } from "react";
-import { appStore } from "./store/appStore"; // telling my app that this is the Redux-Store
+import { appStore } from "./store/appStore";
 import { Provider } from "react-redux";
 import Cart from "./components/Cart";
 
 const AppLayout = () => {
-  // console.log(appStore);
-
   return (
     <Provider store={appStore}>
       <div>

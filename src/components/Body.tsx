@@ -14,9 +14,13 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(ALL_RESDATA_URL);
+    const data = await fetch(
+      "https://corsproxy.org/?" + encodeURIComponent(ALL_RESDATA_URL)
+    );
 
     const json = await data.json();
+
+    console.log(json);
 
     // changing cards[5] to cards[2]
     setAllRes(
