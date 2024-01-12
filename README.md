@@ -5,11 +5,9 @@ It's hosted [here](https://swiggy-clone-psi.vercel.app/).
 
 ## Setting-up the project
 
-- Clone the project locally :
+- Fork the project.
 
-```
-git clone https://github.com/wttc-nitr/Swiggy-clone.git
-```
+- Clone the forked repo locally.
 
 - Install the dependencies :
 
