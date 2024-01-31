@@ -22,12 +22,12 @@ const Body = () => {
 
     // console.log(json);
 
-    // changing cards[5] to cards[2]
+    // changing cards[5] to cards[2], now to 1
     setAllRes(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredListOfRest(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
