@@ -50,8 +50,12 @@ const Body = () => {
         <button
           className="px-4 py-2 bg-green-100 m-4 rounded-lg"
           onClick={() => {
-            const filteredList = allRes.filter((res) =>
-              res.info.name.toLowerCase().includes(value.toLowerCase())
+            const filteredList = allRes.filter(
+              (res) =>
+                res.info.name.toLowerCase().includes(value.toLowerCase()) ||
+                res.info.cuisines.some((item) =>
+                  item.toLowerCase().includes(value.toLowerCase())
+                )
             );
             setFilteredListOfRest(filteredList);
           }}
