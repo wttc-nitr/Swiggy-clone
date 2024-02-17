@@ -33,7 +33,7 @@ const Body = () => {
 
   const [value, setValue] = useState(""); // for accessing the input value for filtering
 
-  return filteredListOfRest?.length === 0 ? (
+  return allRes?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body my-2">
