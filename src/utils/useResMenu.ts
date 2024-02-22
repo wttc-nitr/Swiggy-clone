@@ -15,7 +15,7 @@ const useResMenu = (resId: string) => {
       "https://corsproxy.org/?" + encodeURIComponent(MENU_URL + resId)
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setResInfo(json);
   };
 
