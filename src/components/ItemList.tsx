@@ -25,7 +25,8 @@ const ItemList = ({ items, input }: { items: ItemCard[]; input: string }) => {
       {items.map((item) => (
         <div
           key={item?.card?.info?.id}
-          className="mx-2 my-5 pt-2 pb-3 text-left border-gray-300 border-b-2 last:pb-0 last:border-none flex justify-between"
+          className="mx-2 my-5 pt-2 pb-3 text-left border-gray-300 border-b-2 
+          last:pb-0 last:border-none flex justify-between"
         >
           {/* item-details */}
           <div className="w-9/12">
@@ -47,16 +48,17 @@ const ItemList = ({ items, input }: { items: ItemCard[]; input: string }) => {
           <div className="w-3/12 ml-3 relative">
             <img
               src={CDN_URL + item?.card?.info?.imageId}
-              className="rounded-xl"
+              className="rounded-xl w-full h-full"
             />
             <button
               onClick={() => method(item)}
               title={title}
               className="
-                bg-slate-300 font-normal text-base px-2 py-1 absolute rounded-lg rounded-tr-none rounded-bl-none right-0 bottom-0 hover:shadow-xl"
+                bg-slate-300 font-normal text-base px-2 py-1 
+                absolute rounded-lg rounded-tr-none rounded-bl-none 
+                right-0 bottom-0 hover:shadow-xl object-none"
             >
-              {" "}
-              {btnValue}{" "}
+              {btnValue}
             </button>
           </div>
         </div>
