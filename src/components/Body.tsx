@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import {
   ALL_RESTAURANTS_URL as ALL_RESDATA_URL,
-  CORS_API_HOST,
+  CORS_API_HOST
 } from "../utils/constants";
 import type { RestaurantType as ResType } from "../types/allRestaurants";
 
@@ -17,7 +17,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(CORS_API_HOST + ALL_RESDATA_URL);
+    const data = await fetch(CORS_API_HOST + encodeURIComponent(ALL_RESDATA_URL));
 
     const json = await data.json();
 

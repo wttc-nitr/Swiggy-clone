@@ -13,7 +13,7 @@ export const RES_IMG_URL =
 export const ALL_RESTAURANTS_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING";
 
-export const CORS_API_HOST = "https://cors-anywhere.herokuapp.com/";
+export const CORS_API_HOST = "https://thingproxy.freeboard.io/fetch/";
 
 /**
  * gkp = lat=26.7605545&lng=83.3731675
