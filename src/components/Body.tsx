@@ -17,10 +17,11 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(CORS_API_HOST + encodeURIComponent(ALL_RESDATA_URL));
+    const data = await fetch(CORS_API_HOST+ encodeURIComponent(ALL_RESDATA_URL));
+    // console.log("type of data: ", typeof data);
 
-    const json = await data.json();
-
+    const _json = await data.json();
+    const json = JSON.parse(_json.contents);
     // console.log(json);
 
     // changing cards[5] to cards[2], now to 1
@@ -30,6 +31,8 @@ const Body = () => {
     setFilteredListOfRest(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
+    //  json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   };
 
   const [value, setValue] = useState(""); // for accessing the input value for filtering

@@ -12,7 +12,7 @@ const useResMenu = (resId: string) => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(CORS_API_HOST + encodeURIComponent(MENU_URL) + resId);
+    const data = await fetch(CORS_API_HOST+ encodeURIComponent(MENU_URL + resId));
     const json = await data.json();
     // console.log(json);
     setResInfo(json);
