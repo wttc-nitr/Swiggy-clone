@@ -12,8 +12,6 @@ import { appStore } from "./store/appStore";
 import { Provider } from "react-redux";
 import Cart from "./components/Cart";
 
-alert('cors-api is slow, please wait 30 seconds to load data.');
-
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
@@ -68,3 +66,5 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(<RouterProvider router={appRouter} />);
+
+alert('cors-api is slow, please wait 30 seconds to load data.');
