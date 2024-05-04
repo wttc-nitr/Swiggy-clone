@@ -1,11 +1,9 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useAppSelector } from "../store/actions";
 
 const Header = () => {
-  const [btn, setBtn] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const cartItems = useAppSelector((store) => store.cart.items);
 
@@ -35,17 +33,6 @@ const Header = () => {
           <li className="mx-4">
             <NavLink to="/contact">Contact us</NavLink>
           </li>
-          <li className="mx-4">
-            <NavLink to="/grocery">Grocery</NavLink>
-          </li>
-          <button
-            className="mx-4"
-            onClick={() => {
-              btn === "Login" ? setBtn("Logout") : setBtn("Login");
-            }}
-          >
-            {btn}
-          </button>
         </ul>
       </div>
     </div>
